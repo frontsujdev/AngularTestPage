@@ -82,28 +82,14 @@
             </nz-select>
           </div>
           <div nz-col nzSpan="4">
-            <nz-select
-              style="width: 100%"
-              nzShowSearch
-              nzAllowClear
-              nzPlaceHolder="26.07.2019"
-              [(ngModel)]="startDate">
-                <nz-option nzLabel="26.07.2019" nzValue="jack">26.07.2019</nz-option>
-            </nz-select>
+            <nz-date-picker [nzFormat]="'dd.MM.yyyy'" ></nz-date-picker>
+          </div>
+          <div nz-col nzSpan="4">
+              <nz-date-picker [nzFormat]="'dd.MM.yyyy'" ></nz-date-picker>
           </div>
           <div nz-col nzSpan="4">
             <nz-select
-              style="width: 100%"
-              nzShowSearch
-              nzAllowClear
-              nzPlaceHolder="28.07.2019"
-              [(ngModel)]="endDate">
-                <nz-option nzLabel="28.07.2019" nzValue="jack">28.07.2019</nz-option>
-            </nz-select>
-          </div>
-          <div nz-col nzSpan="4">
-            <nz-select
-              style="width: 100%"
+              style="width: 200px"
               nzShowSearch
               nzAllowClear
               nzPlaceHolder="Все тарифы"
@@ -113,7 +99,7 @@
           </div>
           <div nz-col nzSpan="4">
             <nz-select
-              style="width: 100%;"
+              style="width: 200px"
               nzShowSearch
               nzAllowClear
               nzPlaceHolder="Все типы номеров"
@@ -122,7 +108,7 @@
             </nz-select>
           </div>
           <div nz-col nzSpan="4">
-              <button nz-button nzType="primary" style="width: 100%;">Поиск</button>
+              <button nz-button nzType="primary" style="width: 100%">Поиск</button>
           </div>
         </div>
       <div nz-row nzGutter="16" nzType="flex" style="margin-bottom:24px;">
