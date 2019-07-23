@@ -1,20 +1,212 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<nz-layout>
+  <nz-header>
+    <div class="logo">
+      <svg width="181" height="40" viewBox="0 0 181 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18.127 3.62721L25.3795 10.8797L21.7542 14.505L10.8745 3.62529C11.3507 3.14905 11.9161 2.77131 12.5384 2.51365C13.1607 2.25599 13.8276 2.12347 14.5011 2.12365C15.1746 2.12382 15.8415 2.2567 16.4636 2.51469C17.0858 2.77268 17.651 3.15072 18.127 3.62721Z" fill="#42ABFD"/>
+        <path d="M9.06177 5.44269L25.3746 21.7555C26.3361 22.717 26.8763 24.0211 26.8763 25.3808C26.8763 26.7406 26.3361 28.0446 25.3746 29.0061L5.43648 9.06798L9.06177 5.44269Z" fill="#106DFD"/>
+        <path d="M3.62524 10.8812L23.5672 30.8232L19.9419 34.4485L3.62908 18.1356C3.15218 17.6597 2.77374 17.0945 2.51542 16.4722C2.2571 15.85 2.12396 15.1829 2.1236 14.5092C2.12324 13.8355 2.25568 13.1683 2.51334 12.5457C2.77101 11.9232 3.14884 11.3576 3.62524 10.8812Z" fill="#42ABFD"/>
+        <path d="M7.24414 25.3893L18.1238 36.269C17.1615 37.2283 15.8577 37.7663 14.4989 37.7649C13.1401 37.7634 11.8374 37.2226 10.8771 36.2613L3.62461 29.0088L7.24414 25.3893Z" fill="#106DFD"/>
+        <path d="M44.6371 23.5191C45.6015 24.9478 46.7604 25.8616 48.4191 25.8616C49.9075 25.8616 50.9152 25.0579 50.9152 23.8082C50.9152 22.7594 50.302 22.3135 48.7919 21.6061L47.1926 20.8463C45.0909 19.8636 43.8212 18.7268 43.8212 16.7614C43.8212 14.3501 45.8797 12.7674 48.3758 12.7674C49.3124 12.7482 50.2372 12.9818 51.0566 13.4444C51.8759 13.9071 52.5606 14.5823 53.0412 15.4016L51.4203 16.6733C50.6531 15.5117 49.6023 14.8869 48.3758 14.8869C47.1494 14.8869 46.1985 15.509 46.1985 16.6678C46.2849 17.8294 46.7901 18.0304 48.2138 18.7653L49.8346 19.5251C52.1768 20.6261 53.2951 21.7795 53.2951 23.7201C53.2951 26.2855 51.2367 27.9812 48.4542 27.9812C47.3471 28.0004 46.2556 27.714 45.2954 27.1523C44.3351 26.5906 43.542 25.7746 43 24.7909L44.6371 23.5191Z" fill="#001529"/>
+        <path d="M71.8354 27.739H69.5148V21.2208C69.5148 19.6821 68.6612 18.6774 67.2808 18.6774C66.9649 18.6652 66.6501 18.72 66.3561 18.8383C66.0622 18.9565 65.7955 19.1357 65.5731 19.3645C65.3506 19.5932 65.1772 19.8665 65.0638 20.1671C64.9504 20.4677 64.8995 20.789 64.9143 21.1107V27.739H62.6154V21.2208C62.6154 19.7041 61.7401 18.6774 60.3597 18.6774C58.9793 18.6774 57.9933 19.7041 57.9933 21.2208V27.739H55.6943V16.7808H57.8393V17.8075C58.2443 17.3897 58.7293 17.0611 59.2642 16.8424C59.7991 16.6236 60.3725 16.5193 60.9486 16.5358C62.4371 16.5358 63.5771 17.1827 64.2119 18.2535C64.6491 17.7033 65.2041 17.2624 65.8344 16.9646C66.4647 16.6669 67.1535 16.5202 67.8481 16.5358C70.3226 16.5358 71.8327 18.2755 71.8327 20.8877L71.8354 27.739Z" fill="#001529"/>
+        <path d="M83.2597 27.739H81.1147V26.5113C80.3259 27.472 79.1427 27.984 77.6758 27.984C75.4201 27.984 73.9316 26.7122 73.9316 24.8157C73.9316 22.9191 75.4633 21.6832 77.8946 21.6832H80.9391V20.9757C80.9391 19.459 80.1071 18.6333 78.6402 18.6333C77.4354 18.6333 76.5601 19.17 75.6687 20.2628L74.3315 18.8865C75.412 17.301 77.0032 16.544 78.8645 16.544C81.5146 16.544 83.2651 18.1736 83.2651 21.1189L83.2597 27.739ZM80.9391 23.3871H78.1783C76.9518 23.3871 76.2738 23.833 76.2738 24.7248C76.2738 25.6167 77.041 26.1755 78.1648 26.1755C79.7208 26.1755 80.9472 25.0744 80.9472 23.588L80.9391 23.3871Z" fill="#001529"/>
+        <path d="M92.2444 18.8562H91.5447C89.7267 18.8562 88.3922 19.9573 88.3922 21.8841V27.739H86.0933V16.7807H88.2382V18.2093C88.6115 17.7279 89.0874 17.3392 89.6298 17.0726C90.1722 16.8061 90.767 16.6686 91.3691 16.6706C91.6644 16.671 91.9584 16.7089 92.2444 16.7835V18.8562Z" fill="#001529"/>
+        <path d="M100.835 27.7389C100.21 27.8865 99.5718 27.9685 98.9304 27.9839C96.4559 27.9839 94.9674 26.7342 94.9674 24.1688V18.8121H93.2034V16.7807H94.9566V13.9014H97.2771V16.7807H100.497V18.8121H97.2879V23.9651C97.2879 25.3717 98.0119 25.8616 99.4113 25.8616C99.7408 25.8616 100.2 25.8176 100.835 25.7488V27.7389Z" fill="#001529"/>
+        <path d="M108.95 27.7387H102.753V13.0094H107.813C110.42 13.0094 112.148 14.661 112.148 16.9374C112.163 17.4609 112.063 17.9812 111.854 18.4599C111.646 18.9386 111.334 19.3636 110.944 19.7038C111.739 19.9332 112.437 20.4266 112.926 21.1056C113.416 21.7847 113.669 22.6108 113.645 23.4529C113.637 25.9303 111.776 27.7387 108.95 27.7387ZM105.03 15.0766V19.0569H107.594C109.018 19.0569 109.828 18.2752 109.828 17.0475C109.828 15.8198 109.018 15.0849 107.594 15.0849L105.03 15.0766ZM108.753 21.0801H105.03V25.6633H108.753C110.352 25.6633 111.292 24.7934 111.292 23.3868C111.292 21.9802 110.352 21.0884 108.753 21.0884V21.0801Z" fill="#001529"/>
+        <path d="M120.869 16.5357C124 16.4696 126.65 19.1479 126.585 22.2474C126.65 25.3496 124 28.0499 120.869 27.9811C117.781 28.0472 115.131 25.3469 115.196 22.2474C115.131 19.1011 117.787 16.4916 120.869 16.5357ZM120.891 18.6772C118.986 18.6772 117.541 20.238 117.541 22.2694C117.541 24.3009 118.983 25.8121 120.869 25.8121C122.755 25.8121 124.219 24.2513 124.219 22.2639C124.219 20.2407 122.752 18.6772 120.891 18.6772Z" fill="#001529"/>
+        <path d="M133.825 16.5357C136.956 16.4696 139.606 19.1479 139.541 22.2474C139.606 25.3496 136.956 28.0499 133.825 27.9811C130.737 28.0472 128.087 25.3469 128.152 22.2474C128.087 19.1011 130.737 16.4916 133.825 16.5357ZM133.846 18.6772C131.942 18.6772 130.497 20.238 130.497 22.2694C130.497 24.3009 131.942 25.8121 133.825 25.8121C135.708 25.8121 137.175 24.2513 137.175 22.2639C137.175 20.2407 135.708 18.6772 133.846 18.6772Z" fill="#001529"/>
+        <path d="M141.759 11H144.058V27.7388H141.759V11ZM151.554 27.7388H148.788L144.123 21.5784L148.329 16.7805H151.176L146.84 21.6004L151.554 27.7388Z" fill="#001529"/>
+        <path d="M154.167 11.1349C154.37 11.1331 154.571 11.1721 154.759 11.2496C154.947 11.3271 155.118 11.4416 155.262 11.5865C155.407 11.7315 155.522 11.9041 155.601 12.0944C155.68 12.2847 155.721 12.489 155.723 12.6957C155.706 13.1073 155.534 13.4963 155.242 13.7815C154.95 14.0667 154.562 14.2259 154.157 14.2259C153.753 14.2259 153.364 14.0667 153.073 13.7815C152.781 13.4963 152.609 13.1073 152.592 12.6957C152.594 12.4876 152.636 12.282 152.717 12.0908C152.797 11.8995 152.914 11.7263 153.06 11.5813C153.207 11.4362 153.38 11.3221 153.57 11.2455C153.76 11.1689 153.963 11.1313 154.167 11.1349ZM153.005 16.7806H155.304V27.7388H153.005V16.7806Z" fill="#001529"/>
+        <path d="M167.623 27.7387H165.332V21.1984C165.332 19.6817 164.389 18.655 162.99 18.655C161.59 18.655 160.537 19.7038 160.537 21.1984V27.7387H158.238V16.7805H160.383V17.8512C160.798 17.4129 161.3 17.069 161.855 16.8423C162.41 16.6155 163.005 16.511 163.603 16.5355C166.121 16.5355 167.633 18.2751 167.633 20.8874L167.623 27.7387Z" fill="#001529"/>
+        <path d="M181 16.7806V26.5992C181 30.0593 178.877 31.9999 175.613 31.9999C173.693 32.0107 171.842 31.2674 170.446 29.9244L171.715 28.2948C172.92 29.2775 174.014 29.8556 175.481 29.8556C177.431 29.8556 178.701 28.7848 178.701 26.7313V25.9523C177.891 26.9571 176.556 27.5158 175.065 27.5158C172.064 27.5158 169.83 25.2174 169.83 22.0271C169.83 18.8368 172.085 16.5356 175.057 16.5356C176.699 16.5356 178.08 17.2045 178.869 18.3441V16.7806H181ZM175.481 18.6331C175.042 18.6186 174.605 18.6967 174.197 18.8626C173.789 19.0285 173.419 19.2785 173.111 19.597C172.802 19.9154 172.562 20.2955 172.404 20.7132C172.247 21.1309 172.176 21.5773 172.196 22.0243C172.177 22.4845 172.251 22.9438 172.413 23.3737C172.575 23.8037 172.822 24.1951 173.139 24.5237C173.764 25.1184 174.586 25.4527 175.441 25.4609C176.297 25.469 177.125 25.1504 177.761 24.5678C178.396 23.9649 178.725 23.1171 178.725 22.0023C178.712 19.7699 177.242 18.6331 175.47 18.6331H175.481Z" fill="#001529"/>
+      </svg>
+    </div>
+    <ul nz-menu nzTheme="light" nzMode="horizontal" style="margin-left: 60px;">
+      <li nz-menu-item>Главная</li>
+      <li nz-menu-item>Календарь</li>
+      <li nz-menu-item>Тарифы и наличие мест</li>
+      <li nz-menu-item>Брони и заявки</li>
+      <li nz-menu-item>Турагентсва</li>
+      <li nz-menu-item>Гостиница</li>
+    </ul>
+    <div style=" width: 100%;">
+    <div  style="float: right;">
+      <nz-avatar nzIcon="home" class="ng-avatar-alert"></nz-avatar>
+      <nz-badge [nzCount]="9" style="margin-right: 24px;">
+        <nz-avatar  class="ng-avatar-alert" nzIcon="bell"></nz-avatar>
+      </nz-badge>
+      <nz-avatar nzIcon="user"></nz-avatar>
+    </div>
+  </div>
+  </nz-header>
+  <nz-content>
+    <div nz-row nzType="flex"style="background:#F0F2F5;">
+        <div nz-col nzSpan="7" class="content-header-text" style="margin-left: 10px; line-height: 56px;">Создание новой брони</div>
+        <div nz-col nzSpan="12" nzJustify="center" style="margin-top:11px;">
+          <nz-steps>
+            <nz-step nzStatus="finish"></nz-step>
+            <nz-step ></nz-step>
+            <nz-step ></nz-step>
+            <nz-step ></nz-step>
+          </nz-steps>
+        </div>
+    </div>
+    <div class="inner-content">
 
+      <div nz-row nzGutter="16" nzType="flex" style="margin-bottom: 10px;">
+        <div nz-col nzSpan="4">
+          <label>Выберите источник</label>
+        </div>
+        <div nz-col nzSpan="4">
+          <label>Дата заезд</label>
+        </div>
+        <div nz-col nzSpan="4">
+          <label>Дата выезда</label>
+        </div>
+        <div nz-col nzSpan="4">
+          <label>Тарифный план</label>
+        </div>
+        <div nz-col nzSpan="4">
+          <label>Тип номера</label>
+        </div>
+      </div>
+      <div nz-row nzGutter="16" nzType="flex" style="margin-bottom: 30px;">
+          <div nz-col nzSpan="4">
+            <nz-select
+              style="width: 100%"
+              nzShowSearch
+              nzAllowClear
+              nzPlaceHolder="Не выбрано"
+              [(ngModel)]="selectedValue">
+                <nz-option nzLabel="Не выбрано" nzValue="jack">Не выбрано</nz-option>
+            </nz-select>
+          </div>
+          <div nz-col nzSpan="4">
+            <nz-select
+              style="width: 100%"
+              nzShowSearch
+              nzAllowClear
+              nzPlaceHolder="26.07.2019"
+              [(ngModel)]="startDate">
+                <nz-option nzLabel="26.07.2019" nzValue="jack">26.07.2019</nz-option>
+            </nz-select>
+          </div>
+          <div nz-col nzSpan="4">
+            <nz-select
+              style="width: 100%"
+              nzShowSearch
+              nzAllowClear
+              nzPlaceHolder="28.07.2019"
+              [(ngModel)]="endDate">
+                <nz-option nzLabel="28.07.2019" nzValue="jack">28.07.2019</nz-option>
+            </nz-select>
+          </div>
+          <div nz-col nzSpan="4">
+            <nz-select
+              style="width: 100%"
+              nzShowSearch
+              nzAllowClear
+              nzPlaceHolder="Все тарифы"
+              [(ngModel)]="valueSecond">
+                <nz-option nzLabel="Все тарифы" nzValue="jack">Все тарифы</nz-option>
+            </nz-select>
+          </div>
+          <div nz-col nzSpan="4">
+            <nz-select
+              style="width: 100%;"
+              nzShowSearch
+              nzAllowClear
+              nzPlaceHolder="Все типы номеров"
+              [(ngModel)]="valueThird">
+                <nz-option nzLabel="Все типы номеров" nzValue="jack">Все типы номеров</nz-option>
+            </nz-select>
+          </div>
+          <div nz-col nzSpan="4">
+              <button nz-button nzType="primary" style="width: 100%;">Поиск</button>
+          </div>
+        </div>
+      <div nz-row nzGutter="16" nzType="flex" style="margin-bottom:24px;">
+        <div nz-col nzSpan="4" class="content-header-text">
+          <div style="width:300px;" class="card-body">
+
+            <p style="text-align: center;" class="card-header">Номера</p>
+              <div style="margin-left:auto !important; margin-right:auto !important; width:34px; margin-top:14px;" >
+                  <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 21.6502H34C34.2761 21.6502 34.5 21.874 34.5 22.1502V25.0502C34.5 25.3263 34.2761 25.5502 34 25.5502H8C7.72386 25.5502 7.5 25.3263 7.5 25.0502V22.1502C7.5 21.8741 7.72386 21.6502 8 21.6502Z" stroke="#D9D9D9"/>
+                    <path d="M9.80005 26.0502V29.5502" stroke="#D9D9D9"/>
+                    <path d="M32.2 26.0502V29.5502" stroke="#D9D9D9"/>
+                    <path d="M32.2 21.1502V15.4502C32.2 14.3456 31.3046 13.4502 30.2001 13.4502H11.8C10.6955 13.4502 9.80005 14.3456 9.80005 15.4502V21.1502" stroke="#D9D9D9"/>
+                    <path d="M29.4004 21.8501V19.3501C29.4004 18.7978 28.9527 18.3501 28.4004 18.3501H23.4004C22.8481 18.3501 22.4004 18.7978 22.4004 19.3501V21.8501" stroke="#D9D9D9"/>
+                    <path d="M19.6001 21.8502V19.3502C19.6001 18.7979 19.1524 18.3502 18.6001 18.3502H13.6001C13.0478 18.3502 12.6001 18.7979 12.6001 19.3502V21.8502" stroke="#D9D9D9"/>
+                    <circle cx="20.5" cy="20.5" r="20" stroke="#D9D9D9"/>
+                    </svg>
+                </div>
+            <p style="text-align: center;">Добавьте номера, чтобы<br>начать бронирование</p>
+          </div>
+          <ng-template #avatarTemplate>
+            <nz-avatar nzSrc="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"></nz-avatar>
+          </ng-template>
+        </div>
+        <div nz-col nzSpan="20" class="content-box">
+            <div style="margin-left:auto !important; margin-right:auto !important; width:34px; margin-top:64px;" >
+              <svg width="34" height="29" viewBox="0 0 34 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.9998 12.4284V24.857" stroke="#D9D9D9" stroke-linejoin="round"/>
+                <path d="M10.7854 18.6427L23.214 18.6427" stroke="#D9D9D9" stroke-linejoin="round"/>
+                <rect x="0.928711" y="8.78571" width="32.1429" height="19.7143" stroke="#D9D9D9" stroke-linejoin="round"/>
+                <rect x="0.928711" y="2.98572" width="32.1429" height="5.62857" stroke="#D9D9D9" stroke-linejoin="round"/>
+                <path d="M6.64307 0V6.21429" stroke="#D9D9D9" stroke-linejoin="round"/>
+                <path d="M27.3572 0V6.21429" stroke="#D9D9D9" stroke-linejoin="round"/>
+                </svg>
+
+            </div>
+            <p style="text-align: center">Добавьте даты заезда-выезда,<br>чтобы начать бронирование</p>
+
+        </div>
+      </div>
+      <div nz-row nzGutter="16" nzType="flex" style="">
+          <div nz-col nzSpan="4">
+          </div>
+          <div nz-col nzSpan="20" nzJustify="center">
+            <div nz-row nzGutter="16" nzType="flex" style="margin-bottom:10px;">
+                <div nz-col nzSpan="6" nzJustify="center">
+                  <label>Итого без налогов</label>
+                </div>
+                <div nz-col nzSpan="6" nzJustify="center">
+                    <label>Итого включая налоги</label>
+                </div>
+                <div nz-col nzSpan="6" nzJustify="center">
+                    <label>Предложенный депозит</label>
+                </div>
+                <div nz-col nzSpan="6" nzJustify="center">
+                    <label style="color:#1890FF">Итого к оплате</label>
+                </div>
+            </div>
+            <div nz-row nzGutter="16" nzType="flex" style="color: black;">
+                <div nz-col nzSpan="6" nzJustify="center">
+                  <label>$ 0.00</label>
+                </div>
+                <div nz-col nzSpan="6" nzJustify="center">
+                    <label>$ 0.00</label>
+                </div>
+                <div nz-col nzSpan="6" nzJustify="center">
+                    <label>$ 0.00</label>
+                </div>
+                <div nz-col nzSpan="6" nzJustify="center">
+                    <label style="color:#1890FF">$ 0.00</label>
+                </div>
+            </div>
+          </div>
+      </div>
+      <div nz-row nzGutter="16" nzType="flex" style="margin-top: 24px;">
+          <div nz-col nzSpan="4">
+          </div>
+          <div nz-col nzSpan="20">
+            <div nz-row nzGutter="16" nzType="flex" style="margin-bottom:10px;">
+              <div nz-col nzSpan="24" nzJustify="center">
+                <button nz-button nzType="primary" disabled style="margin-left: 40%">Следующий этап</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nz-content>
+</nz-layout>
